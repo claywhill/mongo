@@ -6,7 +6,7 @@ var EpisodeSchema = new Schema({
   title: {
     type: String,
     required: true
-    },
+  },
 
   link: {
     type: String,
