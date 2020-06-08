@@ -3,7 +3,7 @@ $.getJSON("/episodes", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
     // Display the apropos information on the page
-    $("#episodes").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
+    $("#episodes").append("<p data-id='" + data[i]._id + "'>" + data[i].title + '<a href="' + data[i].link + '">' + 'Go Listen!' + '</a>' + "</p>");
   }
 })
 
@@ -31,12 +31,11 @@ $(document).on("click", "p", function() {
       // A button to submit a new note, with the id of the article saved to it
       $("#notes").append("<button data-id='" + data[0]._id + "' id='savenote'>Save Note</button>");
 
-      if (data.note) {
+      if (data[0].note) {
         // Place the title of the note in the title input
-        $("#titleinput").val(data.note.title);
+        $("#titleinput").val(data[0].note.title);
         // Place the body of the note in the body textarea
-        $("#bodyinput").val(data.note.body);
-        console.log(data.note)
+        $("#bodyinput").val(data[0].note.body);
       }
     });
 });

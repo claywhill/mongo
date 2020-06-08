@@ -74,7 +74,7 @@ app.get("/episodes/:id", function(req, res) {
 })
 
 app.post("/episodes/:id", function(req, res) {
-  db.Episode.create(req.body)
+  db.Note.create(req.body)
   .then(function(dbNote) {
     return db.Episode.findOneAndUpdate({ _id: req.params.id }, { note: dbNote._id }, { new: true });
   })
