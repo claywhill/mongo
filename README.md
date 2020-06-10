@@ -1,5 +1,5 @@
 # mongo-scraper
-<img src = "#" width = "500">
+<img src = "assets/mongo-scraper-screenshot.jpg" width = "500">
 <a href = "https://mongo-claywhill.herokuapp.com/">Link to project</a>
 
 ## Usage
@@ -9,7 +9,7 @@
 ## Tech Used
 * JavaScript
 * Node.js
-* Mongo
+* MongoDB
 
 * **Packages**
   * [Axios](https://www.npmjs.com/package/axios)
@@ -19,3 +19,4 @@
   * [Morgan](https://www.npmjs.com/package/morgan)
 
 ## What this app does
+This app uses cheerio to pull targeted elements from a website. Those elements then get stored in a Mongo database. The elements are then displayed in the browser. The user can then add a note to any of the elements and it will be saved in the database.
